@@ -35,7 +35,20 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX (macOS 10
  	Boot → Secure Boot → Secure Boot : Disabled
 
 
+## Post Installation
+- LAN Network: Not Connected
+1.- System Preferences → Network  → Select your Ethernet controller. Normally it says (not connected).  → Advanced → Hardware:
+	- Switch from Automatically to Manually
+	- Speed : 1000baseT (if doesn't work 100baseTX
+	- Duplex : full-duplex, flow-control, energy-efficient-ethernet
+	- MTU : Standard (1500)
+
+- Move your OpenCore EFI folder to a MacOS drive: https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html#grabbing-opencore-off-the-usb
+
 # Hackitosh Apps
+- Install Homebrew: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+- Karabiner: brew cask install karabiner-elements
+	Import settings from karabiner/ folder
 
 # MacOS Apps
 
