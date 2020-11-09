@@ -29,10 +29,11 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX (macOS 10
  	Save & Exit → Load Optimized Defaults
  	Tweaker → Extreme Memory Profile (X.M.P) : Profile1
  	Settings → Platform Power → Wake on LAN : Disabled
- 	Settings → USB Configuration → XHCI Hand-off : Enabled
+ 	Settings → IO Ports → USB Configuration → XHCI Hand-off : Enabled
  	Boot → Fast Boot : Disabled
  	Boot → CMS Support : Disabled
  	Boot → Secure Boot → Secure Boot : Disabled
+ 	+BIOS ADVANCED SETTINGS
 
 
 ## Post Installation
@@ -46,9 +47,54 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX (macOS 10
 - Move your OpenCore EFI folder to a MacOS drive: https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html#grabbing-opencore-off-the-usb
 
 # Hackitosh Apps
-- Install Homebrew: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-- Karabiner: brew cask install karabiner-elements
+- Install Homebrew : /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+- Karabiner : brew cask install karabiner-elements
 	Import settings from karabiner/ folder
+	If doesn't work change keyboard to "virtual" and Keyb again
+
+- Hackintool
+
+- OpenCore Configurator
 
 # MacOS Apps
+- iTerm2 + Oh My Zsh! : brew cask install iterm2
+	brew install zsh zsh-completions
+	sudo sh -c "echo $(which zsh) >> /etc/shells"
+	chsh -s $(which zsh)
+	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10k
+	echo "source ~/.powerlevel10k/powerlevel10k.zsh-theme" >>! ~/.zshrc	
+	git clone https://github.com/powerline/fonts.git --depth=1
+	cd fonts
+	./install.sh
+	cd ..
+	rm -rf fonts
+	Open iTerm Acceder a “iTerm > Preferences > Profiles > Text”
+	Seleccionar la fuente "Meslo LG S Powerline" o alguna fuente de las entregadas por powerline.
+	cd ~/.oh-my-zsh/custom/plugins
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting
+	git clone https://github.com/zsh-users/zsh-autosuggestions
+	vim ~/.zshrc
+	ZSH_THEME="agnoster"
+	pligons
+	plugins=(
+        git
+        zsh-autosuggestions
+        zsh-syntax-highlighting
+)
+	Colors Batman
+- XtraFinder
+- HyperDock
+- HyperSwitch
+- 1Clipboard : brew cask install 1clipboard (or CopyQ)
+- Caffeine
+- iStat Menus
+- Keka
+- Lightshot Screenshot
+- MonitorControl : brew cask install monitrocontrol
+- Numi
+- PingMenu
+- Rectangle?
+- Tunnelblick
 
