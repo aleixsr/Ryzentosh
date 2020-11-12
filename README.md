@@ -26,14 +26,16 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX (macOS 10
 ## Steps
  - USB: sudo /Applications/Install\ macOS\ Big\ Sur\ Beta.app/Contents/Resources/createinstallmedia  --volume /Volumes/USB --nointeraction
  - BIOS: Update to F10 version
- 	Save & Exit → Load Optimized Defaults
- 	Tweaker → Extreme Memory Profile (X.M.P) : Profile1
- 	Settings → Platform Power → Wake on LAN : Disabled
- 	Settings → IO Ports → USB Configuration → XHCI Hand-off : Enabled
- 	Boot → Fast Boot : Disabled
- 	Boot → CMS Support : Disabled
- 	Boot → Secure Boot → Secure Boot : Disabled
- 	+BIOS ADVANCED SETTINGS
+ 	- Save & Exit → Load Optimized Defaults
+ 	- Tweaker → Extreme Memory Profile (X.M.P) : Profile1
+ 	- Tweaker → Advanced CPU Settings → SVM Mode : Disabled
+ 	- Settings → Platform Power → Wake on LAN : Disabled
+ 	- Settings → IO Ports → USB Configuration → XHCI Hand-off : Enabled
+ 	- Boot → Fast Boot : Disabled
+ 	- Boot → CMS Support : Disabled
+ 	- Boot → Secure Boot → Secure Boot : Disabled
+ 	- ?+BIOS ADVANCED SETTINGS: I2C and ESPI
+ 		Settings -> AMD CBS -> FCH Common Options
 
 
 ## Post Installation
