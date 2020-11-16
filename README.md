@@ -18,7 +18,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
   1. Make your USB installer with [**this guide**](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
   	sudo /Applications/Install\ macOS\ YOUR\ VERSION.app/Contents/Resources/createinstallmedia  --volume /Volumes/USB --nointeraction
   2. Clone the repository and paste "BOOT" and "OC" directories into your's pendrive "EFI" folder
-  3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it and select **Generate SMBIOS**, as the model select **iMacPro1,1**.
+  3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it and follow all steps, as the model select **iMacPro1,1 5**.
   4. Boot it!  
 
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
@@ -47,6 +47,15 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 		- Speed : 1000baseT (if doesn't work 100baseTX
 		- Duplex : full-duplex, flow-control, energy-efficient-ethernet
 		- MTU : Standard (1500)
+- "Memory misconfiguration" when OSX booted: change SMBIOS from iMacPro 7,1 to iMacPro 1,1
+- Low FPS on gaming: Work in progress...https://github.com/AMD-OSX/bugtracker/issues/5
+
+## Hints
+-	If you've dual boot:
+	- To enable macOS-only SMBIOS injection:
+		- Kernel → Quirks → CustomSMBIOSGuid → True
+		- Platforminfo → CustomSMBIOSMode → Custom
+	- To have UTC clock and fix Windows 10 issues : universaltimefix.reg
 
 
 # Hackitosh Apps
@@ -98,3 +107,5 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 - PingMenu
 - Tunnelblick
 
+# Credits
+Many thanks to all the help from AMD-OS X Forums.
