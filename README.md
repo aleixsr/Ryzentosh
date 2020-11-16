@@ -4,7 +4,9 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 ## Specification
 | **Component** | **Model** |
 | ------------- | --------- |
-| CPU           | --------- |
+| CPU | AMD Ryzen 7 3700X |
+| RAM | 32GB (2 x 16GB) DDR4 @3200MHz CL16 |
+| Mobo | Gygabyte B550i Aorus Pro AX |
 
 **OpenCore version**: 0.6.1
 
@@ -48,8 +50,10 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 
 
 # Hackitosh Apps
-- Install Homebrew : /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-- Karabiner : brew cask install karabiner-elements
+- Install Homebrew : 
+	- /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+- Karabiner :
+	- brew cask install karabiner-elements
 	- Import settings from karabiner/ folder
 	- If doesn't work change keyboard to "virtual" and Keyb again
 - Hackintool
@@ -57,30 +61,30 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 
 # MacOS Apps
 - iTerm2 + Oh My Zsh! : brew cask install iterm2
-	brew install zsh zsh-completions
-	sudo sh -c "echo $(which zsh) >> /etc/shells"
-	chsh -s $(which zsh)
-	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10k
-	echo "source ~/.powerlevel10k/powerlevel10k.zsh-theme" >>! ~/.zshrc	
-	git clone https://github.com/powerline/fonts.git --depth=1
-	cd fonts
-	./install.sh
-	cd ..
-	rm -rf fonts
-	Open iTerm Acceder a “iTerm > Preferences > Profiles > Text”
-	Seleccionar la fuente "Meslo LG S Powerline" o alguna fuente de las entregadas por powerline.
-	cd ~/.oh-my-zsh/custom/plugins
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting
-	git clone https://github.com/zsh-users/zsh-autosuggestions
-	vim ~/.zshrc
-	ZSH_THEME="agnoster"
-	plugins=(
+	- brew install zsh zsh-completions
+	- sudo sh -c "echo $(which zsh) >> /etc/shells"
+	- chsh -s $(which zsh)
+	- sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	- git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10k
+	- echo "source ~/.powerlevel10k/powerlevel10k.zsh-theme" >>! ~/.zshrc	
+	- git clone https://github.com/powerline/fonts.git --depth=1
+	- cd fonts
+	- ./install.sh
+	- cd ..
+	- rm -rf fonts
+	- Open iTerm Acceder a “iTerm > Preferences > Profiles > Text”
+	- Seleccionar la fuente "Meslo LG S Powerline" o alguna fuente de las entregadas por powerline.
+	- cd ~/.oh-my-zsh/custom/plugins
+	- git clone https://github.com/zsh-users/zsh-syntax-highlighting
+	- git clone https://github.com/zsh-users/zsh-autosuggestions
+	- vim ~/.zshrc
+	- ZSH_THEME="agnoster"
+	- plugins=(
         git
         zsh-autosuggestions
         zsh-syntax-highlighting
 	)
-	Colors Batman
+	- Colors Batman
 - XtraFinder
 - HyperDock
 - HyperSwitch
