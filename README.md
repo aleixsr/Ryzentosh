@@ -7,12 +7,36 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 | CPU | AMD Ryzen 7 3700X |
 | RAM | 32GB (2 x 16GB) DDR4 @3200MHz CL16 |
 | Mobo | Gygabyte B550i Aorus Pro AX |
+| Graphics | Sapphire Pulse Radeon RX 580 8GB GDDR5 Lite |
 
 **OpenCore version**: 0.6.1
 
 ## Compatible macOS versions
  - Mojave (10.14.x)
  - Catalina (10.15.x) : Sleep not working (cannot wake up from sleep)
+
+## What Works
+ - Wi-Fi : Intel AX200 (see workaround)
+ - Ethernet : 1 Gbps (see workaround)
+ - Bluetooth
+ - HDMI/DisplayPort
+ - Internal/External audio jacks
+ - Sleep/Wake up (Mojave only)
+
+## Issues/Workarounds
+- Intel Wi-Fi : Run Tools/HeliPort app at login, please check [FAQs] https://openintelwireless.github.io/itlwm/FAQ.html
+- LAN Network : Not Connected
+	- System Preferences → Network → Select your Ethernet controller. Normally it says (not connected)  → Advanced → Hardware:
+		- Switch from Automatically to Manually
+		- Speed : 1000baseT (if doesn't work 100baseTX
+		- Duplex : full-duplex, flow-control, energy-efficient-ethernet
+		- MTU : Standard (1500)
+- "Memory Modules Misconfigurured" when OSX has booted : change SMBIOS from iMacPro 7,1 to iMacPro 1,1
+- Low FPS on gaming:
+	- Changing from "uXcCAAC4BgEHALoGAQcADx9AAA==" to "uXcCAAC4BgYGBroGBgYGDzAPCQ==" in "algrey - mtrr_update_action - fix PAT" section gives pretty much better performances, but sound crackling appears when using HDMI/DP audio... https://github.com/AMD-OSX/bugtracker/issues/5
+	- config.plist : Full FPS on gaming but issues using HDMI/DP audio.
+	- config.plist.audioOK : Audio works fine but you'll get low FPS on gaming.
+- Don't have volume control when using HDM/DP : Use MonitorControl app
 
 ## How to use
   1. Make your USB installer with [**this guide**](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
@@ -40,22 +64,16 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 ## Post Installation
 - Move your OpenCore EFI folder to a MacOS drive: https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html#grabbing-opencore-off-the-usb
 
-## Issues
-- LAN Network: Not Connected
-	- System Preferences → Network → Select your Ethernet controller. Normally it says (not connected)  → Advanced → Hardware:
-		- Switch from Automatically to Manually
-		- Speed : 1000baseT (if doesn't work 100baseTX
-		- Duplex : full-duplex, flow-control, energy-efficient-ethernet
-		- MTU : Standard (1500)
-- "Memory misconfiguration" when OSX booted: change SMBIOS from iMacPro 7,1 to iMacPro 1,1
-- Low FPS on gaming: Work in progress...https://github.com/AMD-OSX/bugtracker/issues/5
-
 ## Hints
--	If you've dual boot:
+- SIP has been disabled permanently : csr-active-config = FF070000
+- If you've dual boot:
 	- To enable macOS-only SMBIOS injection:
 		- Kernel → Quirks → CustomSMBIOSGuid → True
 		- Platforminfo → CustomSMBIOSMode → Custom
-	- To have UTC clock and fix Windows 10 issues : universaltimefix.reg
+	- To have UTC clock and fix Windows 10 issues : DualBoot/UniversalTimeFix.reg
+	- Disable Fast Boot on Windows 10 : DualBoot/DisableFastBoot.reg
+
+- n Kernel patches?
 
 
 # Hackitosh Apps
@@ -64,36 +82,15 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 - Karabiner :
 	- brew cask install karabiner-elements
 	- Import settings from karabiner/ folder
-	- If doesn't work change keyboard to "virtual" and Keyb again
+	- If doesn't work change keyboard to "virtual" and cahnge to USB Keyboard again
 - Hackintool
 - OpenCore Configurator
 
 # MacOS Apps
-- iTerm2 + Oh My Zsh! : brew cask install iterm2
+- iTerm2 + Oh My Zsh! :
+	- brew cask install iterm2
 	- brew install zsh zsh-completions
-	- sudo sh -c "echo $(which zsh) >> /etc/shells"
-	- chsh -s $(which zsh)
-	- sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-	- git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10k
-	- echo "source ~/.powerlevel10k/powerlevel10k.zsh-theme" >>! ~/.zshrc	
-	- git clone https://github.com/powerline/fonts.git --depth=1
-	- cd fonts
-	- ./install.sh
-	- cd ..
-	- rm -rf fonts
-	- Open iTerm Acceder a “iTerm > Preferences > Profiles > Text”
-	- Seleccionar la fuente "Meslo LG S Powerline" o alguna fuente de las entregadas por powerline.
-	- cd ~/.oh-my-zsh/custom/plugins
-	- git clone https://github.com/zsh-users/zsh-syntax-highlighting
-	- git clone https://github.com/zsh-users/zsh-autosuggestions
-	- vim ~/.zshrc
-	- ZSH_THEME="agnoster"
-	- plugins=(
-        git
-        zsh-autosuggestions
-        zsh-syntax-highlighting
-	)
-	- Colors Batman
+	- Follow https://www.freecodecamp.org/news/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38/
 - XtraFinder
 - HyperDock
 - HyperSwitch
@@ -108,4 +105,19 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 - Tunnelblick
 
 # Credits
-Many thanks to all the help from AMD-OS X Forums.
+ - [[Kext] Lilu v1.4.9](https://github.com/acidanthera/Lilu)
+ - [[Kext] VirtualSMC v1.1.8](https://github.com/acidanthera/VirtualSMC)
+ - [[Kext] WhateverGreen v1.4.4](https://github.com/acidanthera/WhateverGreen)
+ - [[Kext] AppleALC v1.5.4](https://github.com/acidanthera/AppleALC)
+ - [[Kext] LucyRTL8125Ethernet v1.0.0d6](https://github.com/Mieze/LucyRTL8125Ethernet)
+ - [[Kext] AMDRyzenCPUPowerManagement v0.6.5](https://github.com/trulyspinach/SMCAMDProcessor)
+ - [[Kext] SMCAMDProcessor v1.0](https://github.com/trulyspinach/SMCAMDProcessor)
+ - [[Kext] AppleMCEReporterDisabler v1.0](https://github.com/AMD-OSX/AMD_Vanilla/blob/experimental-opencore/Extra/AppleMCEReporterDisabler.kext.zip)
+ - [[Kext] AGPMInjector (Customized for RX580)](https://github.com/Pavo-IM/AGPMInjector)
+ - [[Kext] itlwm v1.1.0](https://github.com/OpenIntelWireless/itlwm)
+ - [[Kext] IntelBluetoothFirmware v1.1.2](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
+ - [[Kext] IntelBluetoothInjector v1.1.2](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
+ - [[Kext] USBPorts (mobo customized)](https://github.com/headkaze/Hackintool)
+ - [[Kext] VoodooTSCSyncAMD-16Cores (CPU customized)](https://www.insanelymac.com/forum/files/file/744-voodootscsync-configurator/)
+ 
+ Many thanks to all the help from AMD-OS X Forums.
