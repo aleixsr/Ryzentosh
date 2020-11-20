@@ -73,7 +73,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 	- To have UTC clock and fix Windows 10 issues : DualBoot/UniversalTimeFix.reg
 	- Disable Fast Boot on Windows 10 : DualBoot/DisableFastBoot.reg
 
-# Credits
+## Credits
  - [[Kext] Lilu v1.4.9](https://github.com/acidanthera/Lilu)
  - [[Kext] VirtualSMC v1.1.8](https://github.com/acidanthera/VirtualSMC)
  - [[Kext] WhateverGreen v1.4.4](https://github.com/acidanthera/WhateverGreen)
@@ -91,6 +91,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
  - [[Tool] gibMacOS](https://github.com/corpnewt/gibMacOS)
  - [[Tool] GenSMBIOS](https://github.com/corpnewt/GenSMBIOSGenSMBIOS)
  - [[Tool] ProperTree](https://github.com/corpnewt/ProperTreeProperTree)
+ <br>
  Many thanks to all the help from AMD-OS X Forums.
 
 # Hackitosh Apps
