@@ -40,7 +40,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 
 ## How to use
   1. Make your USB installer with [**this guide**](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
-  	sudo /Applications/Install\ macOS\ YOUR\ VERSION.app/Contents/Resources/createinstallmedia  --volume /Volumes/USB --nointeraction
+  	sudo /Applications/Install\ macOS\ YOUR\ VERSION.app/Contents/Resources/createinstallmedia --volume /Volumes/USB --nointeraction
   2. Clone the repository and paste "BOOT" and "OC" directories into your's pendrive "EFI" folder
   3. Download [**GenSMBIOS**](https://github.com/corpnewt/GenSMBIOS) to generate unique SMBIOS information. Run it and follow all steps, as the model select **iMacPro1,1 5**.
   4. Boot it!  
@@ -73,8 +73,25 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 	- To have UTC clock and fix Windows 10 issues : DualBoot/UniversalTimeFix.reg
 	- Disable Fast Boot on Windows 10 : DualBoot/DisableFastBoot.reg
 
-- n Kernel patches?
-
+# Credits
+ - [[Kext] Lilu v1.4.9](https://github.com/acidanthera/Lilu)
+ - [[Kext] VirtualSMC v1.1.8](https://github.com/acidanthera/VirtualSMC)
+ - [[Kext] WhateverGreen v1.4.4](https://github.com/acidanthera/WhateverGreen)
+ - [[Kext] AppleALC v1.5.4](https://github.com/acidanthera/AppleALC)
+ - [[Kext] LucyRTL8125Ethernet v1.0.0d6](https://github.com/Mieze/LucyRTL8125Ethernet)
+ - [[Kext] AMDRyzenCPUPowerManagement v0.6.5](https://github.com/trulyspinach/SMCAMDProcessor)
+ - [[Kext] SMCAMDProcessor v1.0](https://github.com/trulyspinach/SMCAMDProcessor)
+ - [[Kext] AppleMCEReporterDisabler v1.0](https://github.com/AMD-OSX/AMD_Vanilla/blob/experimental-opencore/Extra/AppleMCEReporterDisabler.kext.zip)
+ - [[Kext] AGPMInjector (Customized for RX580)](https://github.com/Pavo-IM/AGPMInjector)
+ - [[Kext] itlwm v1.1.0](https://github.com/OpenIntelWireless/itlwm)
+ - [[Kext] IntelBluetoothFirmware v1.1.2](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
+ - [[Kext] IntelBluetoothInjector v1.1.2](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
+ - [[Kext] USBPorts (mobo customized)](https://github.com/headkaze/Hackintool)
+ - [[Kext] VoodooTSCSyncAMD-16Cores (CPU customized)](https://www.insanelymac.com/forum/files/file/744-voodootscsync-configurator/)
+ - [[Tool] gibMacOS](https://github.com/corpnewt/gibMacOS)
+ - [[Tool] GenSMBIOS](https://github.com/corpnewt/GenSMBIOSGenSMBIOS)
+ - [[Tool] ProperTree](https://github.com/corpnewt/ProperTreeProperTree)
+ Many thanks to all the help from AMD-OS X Forums.
 
 # Hackitosh Apps
 - Install Homebrew : 
@@ -103,21 +120,3 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 - Numi
 - PingMenu
 - Tunnelblick
-
-# Credits
- - [[Kext] Lilu v1.4.9](https://github.com/acidanthera/Lilu)
- - [[Kext] VirtualSMC v1.1.8](https://github.com/acidanthera/VirtualSMC)
- - [[Kext] WhateverGreen v1.4.4](https://github.com/acidanthera/WhateverGreen)
- - [[Kext] AppleALC v1.5.4](https://github.com/acidanthera/AppleALC)
- - [[Kext] LucyRTL8125Ethernet v1.0.0d6](https://github.com/Mieze/LucyRTL8125Ethernet)
- - [[Kext] AMDRyzenCPUPowerManagement v0.6.5](https://github.com/trulyspinach/SMCAMDProcessor)
- - [[Kext] SMCAMDProcessor v1.0](https://github.com/trulyspinach/SMCAMDProcessor)
- - [[Kext] AppleMCEReporterDisabler v1.0](https://github.com/AMD-OSX/AMD_Vanilla/blob/experimental-opencore/Extra/AppleMCEReporterDisabler.kext.zip)
- - [[Kext] AGPMInjector (Customized for RX580)](https://github.com/Pavo-IM/AGPMInjector)
- - [[Kext] itlwm v1.1.0](https://github.com/OpenIntelWireless/itlwm)
- - [[Kext] IntelBluetoothFirmware v1.1.2](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
- - [[Kext] IntelBluetoothInjector v1.1.2](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
- - [[Kext] USBPorts (mobo customized)](https://github.com/headkaze/Hackintool)
- - [[Kext] VoodooTSCSyncAMD-16Cores (CPU customized)](https://www.insanelymac.com/forum/files/file/744-voodootscsync-configurator/)
- 
- Many thanks to all the help from AMD-OS X Forums.
