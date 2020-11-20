@@ -91,8 +91,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
  - [[Tool] gibMacOS](https://github.com/corpnewt/gibMacOS)
  - [[Tool] GenSMBIOS](https://github.com/corpnewt/GenSMBIOSGenSMBIOS)
  - [[Tool] ProperTree](https://github.com/corpnewt/ProperTreeProperTree)
- <br>
- Many thanks to all the help from AMD-OS X Forums.
+ <br> Many thanks to all the help from AMD-OS X Forums.
 
 # Hackitosh Apps
 - Install Homebrew : 
