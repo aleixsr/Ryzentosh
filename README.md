@@ -93,6 +93,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
  - [[Tool] ProperTree](https://github.com/corpnewt/ProperTreeProperTree)
  <br><br> Many thanks to all the help from AMD-OS X Forums.
 
+
 # Hackitosh Apps
 - Install Homebrew : 
 	- /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -102,6 +103,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 	- If doesn't work change keyboard to "virtual" and cahnge to USB Keyboard again
 - Hackintool
 - OpenCore Configurator
+
 
 # MacOS Apps
 - iTerm2 + Oh My Zsh! :
