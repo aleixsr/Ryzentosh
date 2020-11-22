@@ -9,7 +9,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 | Mobo | Gygabyte B550i Aorus Pro AX |
 | Graphics | Sapphire Pulse Radeon RX 580 8GB GDDR5 Lite |
 
-**OpenCore version**: 0.6.1
+**OpenCore version**: 0.6.3
 
 ## Compatible macOS versions
  - Mojave (10.14.x)
@@ -17,20 +17,21 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 
 ## What Works
  - Wi-Fi : Intel AX200 (see workaround)
- - Ethernet : 1 Gbps (see workaround)
  - Bluetooth
+ - Ethernet : 1 Gbps (see workaround)
  - HDMI/DisplayPort
  - Internal/External audio jacks
  - Sleep/Wake up (Mojave only)
 
 ## Issues/Workarounds
 - Intel Wi-Fi : Run Tools/HeliPort app at login, please check [FAQs] https://openintelwireless.github.io/itlwm/FAQ.html
-- LAN Network : Not Connected
+- LAN-Fix-Realtek® 2.5GbE LAN : Not Connected
 	- System Preferences → Network → Select your Ethernet controller. Normally it says (not connected)  → Advanced → Hardware:
 		- Switch from Automatically to Manually
 		- Speed : 1000baseT (if doesn't work 100baseTX
 		- Duplex : full-duplex, flow-control, energy-efficient-ethernet
 		- MTU : Standard (1500)
+	- Command Line option : "sudo ifconfig en0 media 1000baseT mediaopt full-duplex"
 - "Memory Modules Misconfigurured" when OSX has booted : change SMBIOS from iMacPro 7,1 to iMacPro 1,1
 - Low FPS on gaming:
 	- Changing from "uXcCAAC4BgEHALoGAQcADx9AAA==" to "uXcCAAC4BgYGBroGBgYGDzAPCQ==" in "algrey - mtrr_update_action - fix PAT" section gives pretty much better performances, but sound crackling appears when using HDMI/DP audio... https://github.com/AMD-OSX/bugtracker/issues/5
@@ -72,14 +73,15 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 		- Platforminfo → CustomSMBIOSMode → Custom
 	- To have UTC clock and fix Windows 10 issues : DualBoot/UniversalTimeFix.reg
 	- Disable Fast Boot on Windows 10 : DualBoot/DisableFastBoot.reg
+	- NTFS r/w support : brew install ntfs-3g; brew cask install mounty
 
 ## Credits
  - [[Kext] Lilu v1.4.9](https://github.com/acidanthera/Lilu)
  - [[Kext] VirtualSMC v1.1.8](https://github.com/acidanthera/VirtualSMC)
  - [[Kext] WhateverGreen v1.4.4](https://github.com/acidanthera/WhateverGreen)
  - [[Kext] AppleALC v1.5.4](https://github.com/acidanthera/AppleALC)
- - [[Kext] LucyRTL8125Ethernet v1.0.0d6](https://github.com/Mieze/LucyRTL8125Ethernet)
- - [[Kext] AMDRyzenCPUPowerManagement v0.6.5](https://github.com/trulyspinach/SMCAMDProcessor)
+ - [[Kext] LucyRTL8125Ethernet v1.0.0](https://github.com/Mieze/LucyRTL8125Ethernet)
+ - [[Kext] AMDRyzenCPUPowerManagement v0.6.6](https://github.com/trulyspinach/SMCAMDProcessor)
  - [[Kext] SMCAMDProcessor v1.0](https://github.com/trulyspinach/SMCAMDProcessor)
  - [[Kext] AppleMCEReporterDisabler v1.0](https://github.com/AMD-OSX/AMD_Vanilla/blob/experimental-opencore/Extra/AppleMCEReporterDisabler.kext.zip)
  - [[Kext] AGPMInjector (Customized for RX580)](https://github.com/Pavo-IM/AGPMInjector)
@@ -109,16 +111,17 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 - iTerm2 + Oh My Zsh! :
 	- brew cask install iterm2
 	- brew install zsh zsh-completions
-	- Follow https://www.freecodecamp.org/news/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38/
-- XtraFinder
-- HyperDock
-- HyperSwitch
-- CopyQ
-- Caffeine
-- iStat Menus
-- Keka
-- Lightshot Screenshot
-- MonitorControl
-- Numi
-- PingMenu
-- Tunnelblick
+	- Follow https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/
+- XtraFinder : https://www.trankynam.com/xtrafinder/
+- HyperDock : brew install hyperdock
+- HyperSwitch : brew install hyperswitch
+- CopyQ : brew install copyq
+- Caffeine : brew install caffeine
+- iStat Menus : brew install istat-menus
+- Keka : brew install keka
+- Lightshot Screenshot : https://app.prntscr.com/es/download.html
+- MonitorControl : brew cask install monitorcontrol
+- Numi : brew install numi
+- PingMenu : brew cask install pingmenu
+- Tunnelblick : brew install tunnelblick
+- Sublime Text : brew cask install sublime-text
