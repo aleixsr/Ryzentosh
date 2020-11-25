@@ -14,6 +14,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 ## Compatible macOS versions
  - Mojave (10.14.x)
  - Catalina (10.15.x) : Sleep not working (cannot wake up from sleep)
+ - Big Sur (11.0.1)
 
 ## What Works
  - Wi-Fi : Intel AX200 (see workaround)
@@ -21,7 +22,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
  - Ethernet : 1 Gbps (see workaround)
  - HDMI/DisplayPort
  - Internal/External audio jacks
- - Sleep/Wake up (Mojave only)
+ - Sleep/Wake up
 
 ## Issues/Workarounds
 - Intel Wi-Fi : Run Tools/HeliPort app at login, please check [FAQs] https://openintelwireless.github.io/itlwm/FAQ.html
