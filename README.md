@@ -9,12 +9,12 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 | Mobo | Gygabyte B550i Aorus Pro AX |
 | Graphics | Sapphire Pulse Radeon RX 580 8GB GDDR5 Lite |
 
-**OpenCore version**: 0.6.3
+**OpenCore version**: [0.6.4](https://github.com/acidanthera/opencorepkg/releases)
 
 ## Compatible macOS versions
  - Mojave (10.14.x)
  - Catalina (10.15.x) : Sleep not working (cannot wake up from sleep)
- - Big Sur (11.0.1)
+ - Big Sur (11.0.1, 11.1)
 
 ## What Works
  - Wi-Fi : Intel AX200 (see workaround)
@@ -77,10 +77,10 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 	- NTFS r/w support : brew install ntfs-3g; brew cask install mounty
 
 ## Credits
- - [[Kext] Lilu v1.4.9](https://github.com/acidanthera/Lilu)
- - [[Kext] VirtualSMC v1.1.8](https://github.com/acidanthera/VirtualSMC)
- - [[Kext] WhateverGreen v1.4.4](https://github.com/acidanthera/WhateverGreen)
- - [[Kext] AppleALC v1.5.4](https://github.com/acidanthera/AppleALC)
+ - [[Kext] Lilu v1.5.0](https://github.com/acidanthera/Lilu)
+ - [[Kext] VirtualSMC v1.1.9](https://github.com/acidanthera/VirtualSMC)
+ - [[Kext] WhateverGreen v1.4.5](https://github.com/acidanthera/WhateverGreen)
+ - [[Kext] AppleALC v1.5.5](https://github.com/acidanthera/AppleALC)
  - [[Kext] LucyRTL8125Ethernet v1.0.0](https://github.com/Mieze/LucyRTL8125Ethernet)
  - [[Kext] AMDRyzenCPUPowerManagement v0.6.6](https://github.com/trulyspinach/SMCAMDProcessor)
  - [[Kext] SMCAMDProcessor v1.0](https://github.com/trulyspinach/SMCAMDProcessor)
