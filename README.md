@@ -9,7 +9,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 | Mobo | Gygabyte B550i Aorus Pro AX |
 | Graphics | Sapphire Pulse Radeon RX 580 8GB GDDR5 Lite |
 
-**OpenCore version**: [0.6.4](https://github.com/acidanthera/opencorepkg/releases)
+**OpenCore version**: [0.6.5](https://github.com/acidanthera/opencorepkg/releases)
 
 ## Compatible macOS versions
  - Mojave (10.14.x)
@@ -38,7 +38,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 	- Changing from "uXcCAAC4BgEHALoGAQcADx9AAA==" to "uXcCAAC4BgYGBroGBgYGDzAPCQ==" in "algrey - mtrr_update_action - fix PAT" section gives pretty much better performances, but sound crackling appears when using HDMI/DP audio... https://github.com/AMD-OSX/bugtracker/issues/5
 	- config.plist : Full FPS on gaming but issues using HDMI/DP audio.
 	- config.plist.audioOK : Audio works fine but you'll get low FPS on gaming.
-- Don't have volume control when using HDM/DP : Use MonitorControl app
+- Don't have volume control when using HDMI/DP : Use MonitorControl app
 
 ## How to use
   1. Make your USB installer with [**this guide**](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
@@ -70,7 +70,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 - SIP has been disabled permanently : csr-active-config = FF070000
 - If you've dual boot:
 	- To enable macOS-only SMBIOS injection:
-		- Kernel → Quirks → CustomSMBIOSGuid → True
+		- Kernel → Quirks → CustomSMBIOSGuid → True<br>
 		- Platforminfo → CustomSMBIOSMode → Custom
 	- To have UTC clock and fix Windows 10 issues : DualBoot/UniversalTimeFix.reg
 	- Disable Fast Boot on Windows 10 : DualBoot/DisableFastBoot.reg
@@ -94,6 +94,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
  - [[Tool] gibMacOS](https://github.com/corpnewt/gibMacOS)
  - [[Tool] GenSMBIOS](https://github.com/corpnewt/GenSMBIOSGenSMBIOS)
  - [[Tool] ProperTree](https://github.com/corpnewt/ProperTreeProperTree)
+ - [[Tool] OC-tool](https://github.com/rusty-bits/OC-tool)
  <br><br> Many thanks to all the help from AMD-OS X Forums.
 
 
@@ -101,28 +102,28 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 - Install Homebrew : 
 	- /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 - Karabiner :
-	- brew cask install karabiner-elements
+	- brew install --cask karabiner-elements
 	- Import settings from karabiner/ folder
 	- If doesn't work change keyboard to "virtual" and cahnge to USB Keyboard again
-- Hackintool
-- OpenCore Configurator
+- Hackintool : brew install --cask hackintool
+- OpenCore Configurator : brew install --cask opencore-configurator
 
 
 # MacOS Apps
 - iTerm2 + Oh My Zsh! :
-	- brew cask install iterm2
+	- brew install --cask iterm2
 	- brew install zsh zsh-completions
 	- Follow https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/
 - XtraFinder : https://www.trankynam.com/xtrafinder/
-- HyperDock : brew install hyperdock
-- HyperSwitch : brew install hyperswitch
-- CopyQ : brew install copyq
-- Caffeine : brew install caffeine
-- iStat Menus : brew install istat-menus
-- Keka : brew install keka
+- HyperDock : brew install --cask hyperdock
+- HyperSwitch : brew install --cask hyperswitch
+- CopyQ : brew install --cask copyq
+- Caffeine : brew install --cask caffeine
+- iStat Menus : brew install --cask istat-menus
+- Keka : brew install --cask keka
 - Lightshot Screenshot : https://app.prntscr.com/es/download.html
-- MonitorControl : brew cask install monitorcontrol
-- Numi : brew install numi
-- PingMenu : brew cask install pingmenu
-- Tunnelblick : brew install tunnelblick
-- Sublime Text : brew cask install sublime-text
+- MonitorControl : brew install --cask monitorcontrol
+- Numi : brew install --cask numi
+- PingMenu : brew install --cask pingmenu
+- Tunnelblick : brew install --cask tunnelblick
+- Sublime Text : brew install --cask sublime-text
