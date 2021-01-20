@@ -35,9 +35,9 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 	- Command Line option : "sudo ifconfig en0 media 1000baseT mediaopt full-duplex"
 - "Memory Modules Misconfigurured" when OSX has booted : change SMBIOS from iMacPro 7,1 to iMacPro 1,1
 - Low FPS on gaming:
-	- Changing from "uXcCAAC4BgEHALoGAQcADx9AAA==" to "uXcCAAC4BgYGBroGBgYGDzAPCQ==" in "algrey - mtrr_update_action - fix PAT" section gives pretty much better performances, but sound crackling appears when using HDMI/DP audio... https://github.com/AMD-OSX/bugtracker/issues/5
-	- config.plist : Full FPS on gaming but issues using HDMI/DP audio.
-	- config.plist.audioOK : Audio works fine but you'll get low FPS on gaming.
+	- Changing from "uXcCAAC4BgEHALoGAQcADx9AAA==" to "uXcCAAC4BgYGBroGBgYGDzAPCQ==" in "algrey - mtrr_update_action - fix PAT" section gives pretty much better performances, but sound crackling appears when using HDMI/DP audio... https://github.com/AMD-OSX/bugtracker/issues/5. So, enable only one of these Kernel patches:
+		- Shaneee - mtrr_update_action - fix PAT [my default] : Full FPS on gaming but issues using HDMI/DP audio.
+		- algrey - mtrr_update_action - fix PAT : Audio works fine but you'll get low FPS on gaming.
 - Don't have volume control when using HDMI/DP : Use MonitorControl app
 
 ## How to use
@@ -50,7 +50,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
 
 ## Steps
- - BIOS: Update to F10 version
+ - BIOS: Update to F10 version (using F11 version doesn't allow me to wakeup using keyboard ¿WTF?)
  	- Save & Exit → Load Optimized Defaults
  	- Tweaker → Extreme Memory Profile (X.M.P) : Profile1
  	- Tweaker → Advanced CPU Settings → SVM Mode : Enabled (only if you need virtualization)
@@ -70,7 +70,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 - SIP has been disabled permanently : csr-active-config = FF070000
 - If you've dual boot:
 	- To enable macOS-only SMBIOS injection:
-		- Kernel → Quirks → CustomSMBIOSGuid → True<br>
+		- Kernel → Quirks → CustomSMBIOSGuid → True
 		- Platforminfo → CustomSMBIOSMode → Custom
 	- To have UTC clock and fix Windows 10 issues : DualBoot/UniversalTimeFix.reg
 	- Disable Fast Boot on Windows 10 : DualBoot/DisableFastBoot.reg

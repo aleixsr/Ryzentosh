@@ -1,1 +1,1 @@
-v21.01.17: OC 0.6.5
+the newly created EFI folder will be placed in this OUTPUT folder

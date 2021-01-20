@@ -16,35 +16,11 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-DTPG.aml</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-DTPG.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>SSDT-EC-USBX-DESKTOP.aml</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
 				<string>SSDT-EC-USBX-DESKTOP.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-TB3.aml</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-TB3.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT-SBUS-MCHC.aml</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-SBUS-MCHC.aml</string>
 			</dict>
 		</array>
 		<key>Delete</key>
@@ -168,6 +144,8 @@
 				<false/>
 			</dict>
 		</array>
+		<key>Patch</key>
+		<array/>
 		<key>Quirks</key>
 		<dict>
 			<key>AllowRelocationBlock</key>
@@ -207,33 +185,6 @@
 			<key>SyncRuntimePermissions</key>
 			<true/>
 		</dict>
-		<key>Patch</key>
-		<array>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>Comment</key>
-				<string>macOS to hacOS</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>bWFjT1M=</data>
-				<key>Identifier</key>
-				<string>Apple</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>Replace</key>
-				<data>aGFjT1M=</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-		</array>
 	</dict>
 	<key>DeviceProperties</key>
 	<dict>
@@ -270,6 +221,8 @@
 		<key>Add</key>
 		<array>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>Lilu.kext</string>
 				<key>Comment</key>
@@ -284,10 +237,10 @@
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>VirtualSMC.kext</string>
 				<key>Comment</key>
@@ -302,10 +255,10 @@
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>AppleALC.kext</string>
 				<key>Comment</key>
@@ -320,10 +273,10 @@
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>LucyRTL8125Ethernet.kext</string>
 				<key>Comment</key>
@@ -338,10 +291,10 @@
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>WhateverGreen.kext</string>
 				<key>Comment</key>
@@ -356,10 +309,10 @@
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>USBPorts.kext</string>
 				<key>Comment</key>
@@ -374,10 +327,10 @@
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>VoodooTSCSyncAMD-16Cores.kext</string>
 				<key>Comment</key>
@@ -392,10 +345,10 @@
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>AGPMInjector.kext</string>
 				<key>Comment</key>
@@ -410,12 +363,10 @@
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
 				<key>Arch</key>
-				<string>Any</string>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>AppleMCEReporterDisabler.kext</string>
 				<key>Comment</key>
@@ -432,24 +383,8 @@
 				<string>Contents/Info.plist</string>
 			</dict>
 			<dict>
-				<key>BundlePath</key>
-				<string>SMCAMDProcessor.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/SMCAMDProcessor</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
 				<key>Arch</key>
 				<string>x86_64</string>
-			</dict>
-			<dict>
 				<key>BundlePath</key>
 				<string>AMDRyzenCPUPowerManagement.kext</string>
 				<key>Comment</key>
@@ -464,12 +399,28 @@
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
 				<key>Arch</key>
-				<string>Any</string>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>SMCAMDProcessor.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/SMCAMDProcessor</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>itlwm.kext</string>
 				<key>Comment</key>
@@ -487,7 +438,7 @@
 			</dict>
 			<dict>
 				<key>Arch</key>
-				<string>Any</string>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>IntelBluetoothInjector.kext</string>
 				<key>Comment</key>
@@ -505,7 +456,7 @@
 			</dict>
 			<dict>
 				<key>Arch</key>
-				<string>Any</string>
+				<string>x86_64</string>
 				<key>BundlePath</key>
 				<string>IntelBluetoothFirmware.kext</string>
 				<key>Comment</key>
@@ -698,6 +649,8 @@
 				<integer>0</integer>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -724,10 +677,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string>_cpu_topology_sort</string>
 				<key>Comment</key>
@@ -754,10 +707,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -784,10 +737,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -814,10 +767,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -844,10 +797,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -874,10 +827,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -904,10 +857,10 @@
 				<data>AAAAAAAADwAAAAAAAAAAAA==</data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -934,10 +887,10 @@
 				<data>AAAAAAAADwAAAAAA</data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -964,10 +917,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -994,10 +947,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -1024,10 +977,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -1054,10 +1007,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -1084,10 +1037,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -1114,10 +1067,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string>_cpuid_set_info</string>
 				<key>Comment</key>
@@ -1144,10 +1097,10 @@
 				<data>//8AAAAAAP///wAAAAD/////////</data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string>_cpuid_set_info</string>
 				<key>Comment</key>
@@ -1174,10 +1127,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -1204,10 +1157,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -1234,10 +1187,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string>_cpuid_set_info</string>
 				<key>Comment</key>
@@ -1264,10 +1217,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string>_cpuid_set_info</string>
 				<key>Comment</key>
@@ -1294,10 +1247,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string>_cpuid_set_info</string>
 				<key>Comment</key>
@@ -1324,10 +1277,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>1</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string>_cpuid_set_info</string>
 				<key>Comment</key>
@@ -1354,10 +1307,10 @@
 				<data>/wAAAAAAAAAAAAAAAAA=</data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string>_cpuid_set_info</string>
 				<key>Comment</key>
@@ -1384,10 +1337,10 @@
 				<data>//8AAAAAAP8AAAAAAAA=</data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -1414,10 +1367,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -1444,10 +1397,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -1474,10 +1427,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -1504,10 +1457,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string>_tsc_init</string>
 				<key>Comment</key>
@@ -1534,10 +1487,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -1564,10 +1517,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -1594,10 +1547,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -1624,10 +1577,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
@@ -1654,10 +1607,10 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string>_lapic_interrupt</string>
 				<key>Comment</key>
@@ -1684,14 +1637,44 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
 				<string>algrey - mtrr_update_action - fix PAT</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data>icCB4v//AP+BygAAAQC5dwIAAA==</data>
+				<key>Identifier</key>
+				<string>kernel</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data>////////D////////////////w==</data>
+				<key>MaxKernel</key>
+				<string>20.99.99</string>
+				<key>MinKernel</key>
+				<string>17.0.0</string>
+				<key>Replace</key>
+				<data>uXcCAAC4BgEHALoGAQcADx9AAA==</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>Base</key>
+				<string></string>
+				<key>Comment</key>
+				<string>Shaneee - mtrr_update_action - fix PAT</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
@@ -1714,38 +1697,6 @@
 				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>Shaneee - mtrr_update_action - fix PAT</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>icCB4v//AP+BygAAAQC5dwIAAA==</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>////////D////////////////w==</data>
-				<key>MaxKernel</key>
-				<string>20.99.99</string>
-				<key>MinKernel</key>
-				<string>17.0.0</string>
-				<key>Replace</key>
-				<data>uXcCAAC4BgYGBroGBgYGDzAPCQ==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>Arch</key>
-				<string>x86_64</string>
 			</dict>
 		</array>
 		<key>Quirks</key>
@@ -1983,6 +1934,8 @@
 	<dict>
 		<key>Automatic</key>
 		<true/>
+		<key>CustomMemory</key>
+		<false/>
 		<key>Generic</key>
 		<dict>
 			<key>AdviseWindows</key>
@@ -2012,8 +1965,6 @@
 		<true/>
 		<key>UpdateSMBIOSMode</key>
 		<string>Create</string>
-		<key>CustomMemory</key>
-		<false/>
 	</dict>
 	<key>UEFI</key>
 	<dict>
