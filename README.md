@@ -9,12 +9,12 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 | Mobo | Gygabyte B550i Aorus Pro AX |
 | Graphics | Sapphire Pulse Radeon RX 580 8GB GDDR5 Lite |
 
-**OpenCore version**: [0.6.5](https://github.com/acidanthera/opencorepkg/releases)
+**OpenCore version**: [0.6.8](https://github.com/acidanthera/opencorepkg/releases)
 
 ## Compatible macOS versions
  - Mojave (10.14.x)
  - Catalina (10.15.x) : Sleep not working (cannot wake up from sleep)
- - Big Sur (11.0.1, 11.1)
+ - Big Sur (11.2.3)
 
 ## What Works
  - Wi-Fi : Intel AX200 (see workaround)
@@ -50,7 +50,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
 
 ## Steps
- - BIOS: Update to F10 version (using F11 version doesn't allow me to wakeup using keyboard ¿WTF?)
+ - BIOS: Update to F12 version (using F11 version doesn't allow me to wakeup using keyboard ¿WTF?)
  	- Save & Exit → Load Optimized Defaults
  	- Tweaker → Extreme Memory Profile (X.M.P) : Profile1
  	- Tweaker → Advanced CPU Settings → SVM Mode : Enabled (only if you need virtualization)
@@ -67,7 +67,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 - Move your OpenCore EFI folder to a MacOS drive: https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html#grabbing-opencore-off-the-usb
 
 ## Hints
-- SIP has been disabled permanently : csr-active-config = FF070000
+- To disable SIP enter in recovery mode an run "csrutil disable" in terminal.
 - If you've dual boot:
 	- To enable macOS-only SMBIOS injection:
 		- Kernel → Quirks → CustomSMBIOSGuid → True
@@ -77,16 +77,16 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 	- NTFS r/w support : brew install ntfs-3g; brew cask install mounty
 
 ## Credits
- - [[Kext] Lilu v1.5.0](https://github.com/acidanthera/Lilu)
- - [[Kext] VirtualSMC v1.1.9](https://github.com/acidanthera/VirtualSMC)
- - [[Kext] WhateverGreen v1.4.5](https://github.com/acidanthera/WhateverGreen)
+ - [[Kext] Lilu v1.5.2](https://github.com/acidanthera/Lilu)
+ - [[Kext] VirtualSMC v1.2.2](https://github.com/acidanthera/VirtualSMC)
+ - [[Kext] WhateverGreen v1.4.9](https://github.com/acidanthera/WhateverGreen)
  - [[Kext] AppleALC v1.5.5](https://github.com/acidanthera/AppleALC)
  - [[Kext] LucyRTL8125Ethernet v1.0.0](https://github.com/Mieze/LucyRTL8125Ethernet)
  - [[Kext] AMDRyzenCPUPowerManagement v0.6.6](https://github.com/trulyspinach/SMCAMDProcessor)
  - [[Kext] SMCAMDProcessor v1.0](https://github.com/trulyspinach/SMCAMDProcessor)
  - [[Kext] AppleMCEReporterDisabler v1.0](https://github.com/AMD-OSX/AMD_Vanilla/blob/experimental-opencore/Extra/AppleMCEReporterDisabler.kext.zip)
  - [[Kext] AGPMInjector (Customized for RX580)](https://github.com/Pavo-IM/AGPMInjector)
- - [[Kext] itlwm v1.1.0](https://github.com/OpenIntelWireless/itlwm)
+ - [[Kext] itlwm v1.2.0](https://github.com/OpenIntelWireless/itlwm)
  - [[Kext] IntelBluetoothFirmware v1.1.2](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
  - [[Kext] IntelBluetoothInjector v1.1.2](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
  - [[Kext] USBPorts (mobo customized)](https://github.com/headkaze/Hackintool)
