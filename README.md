@@ -9,7 +9,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 | Mobo | Gygabyte B550i Aorus Pro AX |
 | Graphics | Sapphire Pulse Radeon RX 580 8GB GDDR5 Lite |
 
-**OpenCore version**: [0.6.8](https://github.com/acidanthera/opencorepkg/releases)
+**OpenCore version**: [0.7.3](https://github.com/acidanthera/opencorepkg/releases)
 
 ## Compatible macOS versions
  - Mojave (10.14.x)
@@ -17,7 +17,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
  - Big Sur (11.2.3)
 
 ## What Works
- - Wi-Fi : Intel AX200 (see workaround)
+ - Wi-Fi : Intel AX200 (~~see workaround~~ not needed any more since LucyRTL8125Ethernet v1.1.0)
  - Bluetooth
  - Ethernet : 1 Gbps (see workaround)
  - HDMI/DisplayPort
@@ -77,18 +77,17 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 	- NTFS r/w support : brew install ntfs-3g; brew cask install mounty
 
 ## Credits
- - [[Kext] Lilu v1.5.2](https://github.com/acidanthera/Lilu)
- - [[Kext] VirtualSMC v1.2.2](https://github.com/acidanthera/VirtualSMC)
- - [[Kext] WhateverGreen v1.4.9](https://github.com/acidanthera/WhateverGreen)
- - [[Kext] AppleALC v1.5.5](https://github.com/acidanthera/AppleALC)
- - [[Kext] LucyRTL8125Ethernet v1.0.0](https://github.com/Mieze/LucyRTL8125Ethernet)
- - [[Kext] AMDRyzenCPUPowerManagement v0.6.6](https://github.com/trulyspinach/SMCAMDProcessor)
+ - [[Kext] Lilu v1.5.6](https://github.com/acidanthera/Lilu)
+ - [[Kext] VirtualSMC v1.2.7](https://github.com/acidanthera/VirtualSMC)
+ - [[Kext] WhateverGreen v1.5.3](https://github.com/acidanthera/WhateverGreen)
+ - [[Kext] AppleALC v1.6.4](https://github.com/acidanthera/applealc)
+ - [[Kext] LucyRTL8125Ethernet v1.1.0](https://github.com/Mieze/LucyRTL8125Ethernet)
+ - [[Kext] AMDRyzenCPUPowerManagement v0.7](https://github.com/trulyspinach/SMCAMDProcessor)
  - [[Kext] SMCAMDProcessor v1.0](https://github.com/trulyspinach/SMCAMDProcessor)
- - [[Kext] AppleMCEReporterDisabler v1.0](https://github.com/AMD-OSX/AMD_Vanilla/blob/experimental-opencore/Extra/AppleMCEReporterDisabler.kext.zip)
  - [[Kext] AGPMInjector (Customized for RX580)](https://github.com/Pavo-IM/AGPMInjector)
- - [[Kext] itlwm v1.2.0](https://github.com/OpenIntelWireless/itlwm)
- - [[Kext] IntelBluetoothFirmware v1.1.2](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
- - [[Kext] IntelBluetoothInjector v1.1.2](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
+ - [[Kext] itlwm v2.0.0](https://github.com/OpenIntelWireless/itlwm) [[App] Heliport v1.4.1] (https://github.com/OpenIntelWireless/HeliPort)
+ - [[Kext] IntelBluetoothFirmware v2.0.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
+ - [[Kext] IntelBluetoothInjector v2.0.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
  - [[Kext] USBPorts (mobo customized)](https://github.com/headkaze/Hackintool)
  - [[Kext] VoodooTSCSyncAMD-16Cores (CPU customized)](https://www.insanelymac.com/forum/files/file/744-voodootscsync-configurator/)
  - [[Tool] gibMacOS](https://github.com/corpnewt/gibMacOS)
