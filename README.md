@@ -14,7 +14,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 ## Compatible macOS versions
  - Mojave (10.14.x)
  - Catalina (10.15.x) : Sleep not working (cannot wake up from sleep)
- - Big Sur (11.2.3)
+ - Big Sur (11.5.2)
 
 ## What Works
  - Wi-Fi : Intel AX200 (~~see workaround~~ not needed any more since LucyRTL8125Ethernet v1.1.0)
@@ -87,7 +87,6 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
  - [[Kext] AGPMInjector (Customized for RX580)](https://github.com/Pavo-IM/AGPMInjector)
  - [[Kext] itlwm v2.0.0](https://github.com/OpenIntelWireless/itlwm) [[App] Heliport v1.4.1] (https://github.com/OpenIntelWireless/HeliPort)
  - [[Kext] IntelBluetoothFirmware v2.0.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
- - [[Kext] IntelBluetoothInjector v2.0.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
  - [[Kext] USBPorts (mobo customized)](https://github.com/headkaze/Hackintool)
  - [[Kext] VoodooTSCSyncAMD-16Cores (CPU customized)](https://www.insanelymac.com/forum/files/file/744-voodootscsync-configurator/)
  - [[Tool] gibMacOS](https://github.com/corpnewt/gibMacOS)
