@@ -33,7 +33,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 		- Duplex : full-duplex, flow-control, energy-efficient-ethernet
 		- MTU : Standard (1500)
 	- Command Line option : "sudo ifconfig en0 media 1000baseT mediaopt full-duplex"
-- "Memory Modules Misconfigurured" when OSX has booted : change SMBIOS from iMacPro 7,1 to iMacPro 1,1
+- "Memory Modules Misconfigured" when OSX has booted : change SMBIOS from iMacPro 7,1 to iMacPro 1,1
 - Low FPS on gaming:
 	- Changing from "uXcCAAC4BgEHALoGAQcADx9AAA==" to "uXcCAAC4BgYGBroGBgYGDzAPCQ==" in "algrey - mtrr_update_action - fix PAT" section gives pretty much better performances, but sound crackling appears when using HDMI/DP audio... https://github.com/AMD-OSX/bugtracker/issues/5. So, enable only one of these Kernel patches:
 		- Shaneee - mtrr_update_action - fix PAT [my default] : Full FPS on gaming but issues using HDMI/DP audio.
