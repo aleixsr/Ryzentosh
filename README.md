@@ -4,35 +4,27 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 ## Specification
 | **Component** | **Model** |
 | ------------- | --------- |
-| CPU | AMD Ryzen 7 3700X |
+| CPU | AMD Ryzen 7 3700X (8-Core) |
 | RAM | 32GB (2 x 16GB) DDR4 @3200MHz CL16 |
-| Mobo | Gygabyte B550i Aorus Pro AX |
-| Graphics | Sapphire Pulse Radeon RX 580 8GB GDDR5 Lite |
+| Mobo | Gigabyte B550i Aorus Pro AX (BIOS: F12)|
+| Graphics | Sapphire Pulse Radeon RX 580 8GB GDDR5 Lite (Polaris) |
 
-**OpenCore version**: [0.7.3](https://github.com/acidanthera/opencorepkg/releases)
+**OpenCore version**: [0.8.3](https://github.com/acidanthera/opencorepkg/releases)
 
 ## Compatible macOS versions
- - Mojave (10.14.x)
- - Catalina (10.15.x) : Sleep not working (cannot wake up from sleep)
- - Big Sur (11.5.2)
+ - Monterey (12.5.1)
+ - Big Sur (11.6.8)
+ - Mojave (10.14.6)
 
 ## What Works
- - Wi-Fi : Intel AX200 (~~see workaround~~ not needed any more since LucyRTL8125Ethernet v1.1.0)
- - Bluetooth
- - Ethernet : 1 Gbps (see workaround)
+ - Wi-Fi : Intel AX200
+ - Bluetooth : Intel
+ - Ethernet : 1 Gbps
  - HDMI/DisplayPort
  - Internal/External audio jacks
  - Sleep/Wake up
 
 ## Issues/Workarounds
-- Intel Wi-Fi : Run Tools/HeliPort app at login, please check [FAQs] https://openintelwireless.github.io/itlwm/FAQ.html
-- LAN-Fix-Realtek® 2.5GbE LAN : Not Connected
-	- System Preferences → Network → Select your Ethernet controller. Normally it says (not connected)  → Advanced → Hardware:
-		- Switch from Automatically to Manually
-		- Speed : 1000baseT (if doesn't work 100baseTX
-		- Duplex : full-duplex, flow-control, energy-efficient-ethernet
-		- MTU : Standard (1500)
-	- Command Line option : "sudo ifconfig en0 media 1000baseT mediaopt full-duplex"
 - "Memory Modules Misconfigured" when OSX has booted : change SMBIOS from iMacPro 7,1 to iMacPro 1,1
 - Low FPS on gaming:
 	- Changing from "uXcCAAC4BgEHALoGAQcADx9AAA==" to "uXcCAAC4BgYGBroGBgYGDzAPCQ==" in "algrey - mtrr_update_action - fix PAT" section gives pretty much better performances, but sound crackling appears when using HDMI/DP audio... https://github.com/AMD-OSX/bugtracker/issues/5. So, enable only one of these Kernel patches:
@@ -50,15 +42,15 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 **You CAN NOT use SMBIOS from this repository, it MUST be unique for every macOS installation**
 
 ## Steps
- - BIOS: Update to F12 version (using F11 version doesn't allow me to wakeup using keyboard ¿WTF?)
+ - BIOS: Update to F12 version (later versions have issues with sleep)
  	- Save & Exit → Load Optimized Defaults
  	- Tweaker → Extreme Memory Profile (X.M.P) : Profile1
  	- Tweaker → Advanced CPU Settings → SVM Mode : Enabled (only if you need virtualization)
  	- Settings → Platform Power → Wake on LAN : Disabled
  	- Settings → IO Ports → USB Configuration → XHCI Hand-off : Enabled
- 	- Settings → AMD CBS → FCH Common Options → I2C Configuration Options → I2C 2 Enable : Disabled
- 	- Settings → AMD CBS → FCH Common Options → I2C Configuration Options → I2C 3 Enable : Disabled
-	- Settings → AMD CBS → FCH Common Options → ESPI Configuration Options → ESPI Enable : Disabled
+  - Settings → IO Ports → Above 4G decoding : Enabled    ¡THIS ONE IS VERY IMPORTANT TO AVOID KERNEL PANIC AT BOOT!
+  - Settings → IO Ports → Re-Size BAR Support : Auto
+  - Settings → Miscellaneous → IOMMU : Disabled
  	- Boot → Fast Boot : Disabled
  	- Boot → CMS Support : Disabled
  	- Boot → Secure Boot → Secure Boot : Disabled
@@ -71,28 +63,33 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 - If you've dual boot:
 	- To enable macOS-only SMBIOS injection:
 		- Kernel → Quirks → CustomSMBIOSGuid → True
-		- Platforminfo → CustomSMBIOSMode → Custom
+		- Platforminfo → CustomSMBIOSMode → Custom
 	- To have UTC clock and fix Windows 10 issues : DualBoot/UniversalTimeFix.reg
 	- Disable Fast Boot on Windows 10 : DualBoot/DisableFastBoot.reg
 	- NTFS r/w support : brew install ntfs-3g; brew cask install mounty
 
 ## Credits
- - [[Kext] Lilu v1.5.6](https://github.com/acidanthera/Lilu)
- - [[Kext] VirtualSMC v1.2.7](https://github.com/acidanthera/VirtualSMC)
- - [[Kext] WhateverGreen v1.5.3](https://github.com/acidanthera/WhateverGreen)
- - [[Kext] AppleALC v1.6.4](https://github.com/acidanthera/applealc)
- - [[Kext] LucyRTL8125Ethernet v1.1.0](https://github.com/Mieze/LucyRTL8125Ethernet)
- - [[Kext] AMDRyzenCPUPowerManagement v0.7](https://github.com/trulyspinach/SMCAMDProcessor)
+ - [[Kext] Lilu v1.6.2](https://github.com/acidanthera/Lilu)
+ - [[Kext] VirtualSMC v1.3.0](https://github.com/acidanthera/VirtualSMC)
+ - [[Kext] WhateverGreen v1.6.1](https://github.com/acidanthera/WhateverGreen)
+ - [[Kext] AMDRyzenCPUPowerManagement v0.7.1](https://github.com/trulyspinach/SMCAMDProcessor)
  - [[Kext] SMCAMDProcessor v1.0](https://github.com/trulyspinach/SMCAMDProcessor)
- - [[Kext] AGPMInjector (Customized for RX580)](https://github.com/Pavo-IM/AGPMInjector)
- - [[Kext] itlwm v2.0.0](https://github.com/OpenIntelWireless/itlwm) [[App] Heliport v1.4.1] (https://github.com/OpenIntelWireless/HeliPort)
- - [[Kext] IntelBluetoothFirmware v2.0.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
- - [[Kext] USBPorts (mobo customized)](https://github.com/headkaze/Hackintool)
- - [[Kext] VoodooTSCSyncAMD-16Cores (CPU customized)](https://www.insanelymac.com/forum/files/file/744-voodootscsync-configurator/)
+ - [[Kext] AppleALC v1.7.4](https://github.com/acidanthera/applealc)
+ - [[Kext] LucyRTL8125Ethernet v1.1.0](https://github.com/Mieze/LucyRTL8125Ethernet)
+ - [[Kext] AppleMCEReporterDisabler v1.0](https://github.com/acidanthera/bugtracker/files/3703498/AppleMCEReporterDisabler.kext.zip)
+ - [[Kext] RestrictEvents v1.0.8](https://github.com/acidanthera/RestrictEvents)
+ - [[Kext] AirportItlwm v2.2.0](https://github.com/OpenIntelWireless/itlwm)
+ - [[Kext] IntelBluetoothFirmware v2.2.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
+ - [[Kext] BlueToolFixup v2.6.3](https://github.com/acidanthera/BrcmPatchRAM)
+
  - [[Tool] gibMacOS](https://github.com/corpnewt/gibMacOS)
  - [[Tool] GenSMBIOS](https://github.com/corpnewt/GenSMBIOSGenSMBIOS)
  - [[Tool] ProperTree](https://github.com/corpnewt/ProperTreeProperTree)
- - [[Tool] OC-tool](https://github.com/rusty-bits/OC-tool)
+ - [[Tool] octool](https://github.com/rusty-bits/octool)
+
+ - [[Repo] radianttap/EFI-B550I-Aorus] (https://github.com/radianttap/EFI-B550I-Aorus)
+ - [[Repo] mikigal/ryzen-hackintosh](https://github.com/mikigal/ryzen-hackintosh)
+
  <br><br> Many thanks to all the help from AMD-OS X Forums.
 
 
@@ -113,15 +110,20 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
 	- brew install zsh zsh-completions
 	- Follow https://www.freecodecamp.org/news/how-to-configure-your-macos-terminal-with-zsh-like-a-pro-c0ab3f3c1156/
 - XtraFinder : https://www.trankynam.com/xtrafinder/
-- HyperDock : brew install --cask hyperdock
 - HyperSwitch : brew install --cask hyperswitch
-- CopyQ : brew install --cask copyq
+- Maccy : brew install --cask maccy
 - Caffeine : brew install --cask caffeine
 - iStat Menus : brew install --cask istat-menus
 - Keka : brew install --cask keka
-- Lightshot Screenshot : https://app.prntscr.com/es/download.html
+- Shottr Screenshot : brew install --cask shottr
 - MonitorControl : brew install --cask monitorcontrol
 - Numi : brew install --cask numi
 - PingMenu : brew install --cask pingmenu
 - Tunnelblick : brew install --cask tunnelblick
 - Sublime Text : brew install --cask sublime-text
+
+# Bonus Track
+- Disable cration of junk files (._)
+  - defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+  - defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
