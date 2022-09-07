@@ -87,7 +87,7 @@ OpenCore EFI for AMD Ryzen running OS X on Gigabyte B550i Aorus Pro AX
  - [[Tool] ProperTree](https://github.com/corpnewt/ProperTreeProperTree)
  - [[Tool] octool](https://github.com/rusty-bits/octool)
 
- - [[Repo] radianttap/EFI-B550I-Aorus] (https://github.com/radianttap/EFI-B550I-Aorus)
+ - [[Repo] radianttap/EFI-B550I-Aorus](https://github.com/radianttap/EFI-B550I-Aorus)
  - [[Repo] mikigal/ryzen-hackintosh](https://github.com/mikigal/ryzen-hackintosh)
 
  <br><br> Many thanks to all the help from AMD-OS X Forums.
