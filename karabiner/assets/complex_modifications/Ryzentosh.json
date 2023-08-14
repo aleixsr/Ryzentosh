@@ -2,7 +2,7 @@
     "title": "Ryzentosh",
     "rules": [
         {
-            "description": "non_us_backslash(\\) <--> Less/greater than(<>) [except Virtualbox]",
+            "description": "non_us_backslash(\\) <--> Less/greater than(<>) [except Virtualbox, Ms Remote Desktop]",
             "manipulators": [
                 {
                     "from": {
@@ -24,7 +24,8 @@
                         {
                             "type": "frontmost_application_unless",
                             "bundle_identifiers": [
-                                "^org\\.virtualbox\\.app\\.VirtualBoxVM$"
+                                "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                "^com\\.microsoft\\.rdc\\.macos$"
                             ]
                         }
                     ]
@@ -49,7 +50,8 @@
                         {
                             "type": "frontmost_application_unless",
                             "bundle_identifiers": [
-                                "^org\\.virtualbox\\.app\\.VirtualBoxVM$"
+                                "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                "^com\\.microsoft\\.rdc\\.macos$"
                             ]
                         }
                     ]
