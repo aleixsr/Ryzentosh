@@ -78,7 +78,8 @@ Hackintosh OpenCore EFI for AMD **Ryzen** running OS X on **Gigabyte B550i Aorus
  - [[Kext] AMDRyzenCPUPowerManagement](https://github.com/trulyspinach/SMCAMDProcessor) :: Power management and monitoring for AMD processors.
  - [[Kext] SMCAMDProcessor v1.0](https://github.com/trulyspinach/SMCAMDProcessor) :: [Requires AMDRyzenCPUPowerManagement] Publish power management and monitoring for AMD processors.
  - [[Kext] AGPMInjector](https://github.com/aluveitie/AGPMInjector) :: GPU power management.
- - [[Kext] SMCRadeonGPU/RadeonSensor](https://github.com/NootInc/RadeonSensor) :: Temperature sensor for AMD GPUs.
+ - ~~[[Kext] SMCRadeonGPU/RadeonSensor](https://github.com/NootInc/RadeonSensor) :: Temperature sensor for AMD GPUs.~
+ - [[Kext] SMCRadeonSensors](https://github.com/ChefKissInc/SMCRadeonSensors) :: AMD GPU temperature monitoring on macOS.
  - [[Kext] LucyRTL8125Ethernet](https://github.com/Mieze/LucyRTL8125Ethernet) :: Realtek RTL8125 2.5GBit Ethernet driver.
  - [[Kext] USB ToolBox/UTBMap-all-headers and UTBMap-no-headers v1.1.1](https://github.com/USBToolBox/kext) :: Mobo USB mapping (enable only 1 of these 2 headers).
  - [[Kext] AppleMCEReporterDisabler](https://github.com/acidanthera/bugtracker/files/3703498/AppleMCEReporterDisabler.kext.zip) :: Required on AMD systems (Affected SMBIOSes: MacPro6,1 MacPro7,1 iMacPro1,1).
