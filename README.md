@@ -12,7 +12,7 @@ Hackintosh OpenCore EFI for AMD **Ryzen** running OS X on **Gigabyte B550i Aorus
 **OpenCore version**: [0.9.4](https://github.com/acidanthera/opencorepkg/releases)
 
 ## Compatible macOS versions
- - Monterey (12.6.8)
+ - Monterey (12.7.4)
 
 ## What Works
  - Wi-Fi : Intel AX200
@@ -69,22 +69,23 @@ Hackintosh OpenCore EFI for AMD **Ryzen** running OS X on **Gigabyte B550i Aorus
 	- NTFS r/w support : brew install ntfs-3g; brew cask install mounty
 
 ## Credits
- - [[Kext] Lilu v1.6.7](https://github.com/acidanthera/Lilu) :: Hackintosh patching tool.
- - [[Kext] VirtualSMC v1.3.2](https://github.com/acidanthera/VirtualSMC) :: Hackintosh system management controller (thermal management and power supply, battery charging, video mode switching, sleep and wake, hibernation, and LED indicators).
- - [[Kext] WhateverGreen v1.6.6](https://github.com/acidanthera/WhateverGreen) :: [Lilu plugin] GPU patching.
- - [[Kext] RestrictEvents v1.1.2](https://github.com/acidanthera/RestrictEvents) :: Prevents compatibility issues.
- - [[Kext] AppleALC v1.8.4](https://github.com/acidanthera/applealc) :: Audio driver.
- - [[Kext] AMDRyzenCPUPowerManagement v0.7.1](https://github.com/trulyspinach/SMCAMDProcessor) :: Power management and monitoring for AMD processors.
+ - [[Kext] Lilu](https://github.com/acidanthera/Lilu) :: Hackintosh patching tool.
+ - [[Kext] VirtualSMC](https://github.com/acidanthera/VirtualSMC) :: Hackintosh system management controller (thermal management and power supply, battery charging, video mode switching, sleep and wake, hibernation, and LED indicators).
+ - [[Kext] WhateverGreen](https://github.com/acidanthera/WhateverGreen) :: [Lilu plugin] GPU patching.
+ - [[Kext] NootRX](https://github.com/ChefKissInc/NootRX) :: [Lilu plug-in for unsupported RDNA 2 dGPUs] GPU patching.
+ - [[Kext] RestrictEvents](https://github.com/acidanthera/RestrictEvents) :: Prevents compatibility issues.
+ - [[Kext] AppleALC](https://github.com/acidanthera/applealc) :: Audio driver.
+ - [[Kext] AMDRyzenCPUPowerManagement](https://github.com/trulyspinach/SMCAMDProcessor) :: Power management and monitoring for AMD processors.
  - [[Kext] SMCAMDProcessor v1.0](https://github.com/trulyspinach/SMCAMDProcessor) :: [Requires AMDRyzenCPUPowerManagement] Publish power management and monitoring for AMD processors.
- - [[Kext] AGPMInjector v3.3.4](https://github.com/aluveitie/AGPMInjector) :: GPU power management.
- - [[Kext] SMCRadeonGPU/RadeonSensor v1.1.0](https://github.com/NootInc/RadeonSensor) :: Temperature sensor for AMD GPUs.
- - [[Kext] LucyRTL8125Ethernet v1.1.0](https://github.com/Mieze/LucyRTL8125Ethernet) :: Realtek RTL8125 2.5GBit Ethernet driver.
+ - [[Kext] AGPMInjector](https://github.com/aluveitie/AGPMInjector) :: GPU power management.
+ - [[Kext] SMCRadeonGPU/RadeonSensor](https://github.com/NootInc/RadeonSensor) :: Temperature sensor for AMD GPUs.
+ - [[Kext] LucyRTL8125Ethernet](https://github.com/Mieze/LucyRTL8125Ethernet) :: Realtek RTL8125 2.5GBit Ethernet driver.
  - [[Kext] USB ToolBox/UTBMap-all-headers and UTBMap-no-headers v1.1.1](https://github.com/USBToolBox/kext) :: Mobo USB mapping (enable only 1 of these 2 headers).
- - [[Kext] AppleMCEReporterDisabler v1.0](https://github.com/acidanthera/bugtracker/files/3703498/AppleMCEReporterDisabler.kext.zip) :: Required on AMD systems (Affected SMBIOSes: MacPro6,1 MacPro7,1 iMacPro1,1).
- - [[Kext] AirportItlwm v2.2.0](https://github.com/OpenIntelWireless/itlwm) :: Intel Wi-Fi driver.
+ - [[Kext] AppleMCEReporterDisabler](https://github.com/acidanthera/bugtracker/files/3703498/AppleMCEReporterDisabler.kext.zip) :: Required on AMD systems (Affected SMBIOSes: MacPro6,1 MacPro7,1 iMacPro1,1).
+ - [[Kext] AirportItlwm](https://github.com/OpenIntelWireless/itlwm) :: Intel Wi-Fi driver.
  - [[Kext] IntelBluetoothFirmware/IntelBTPatcher/IntelBluetoothInjector v2.3.0](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) :: Intel BlueTooth driver.
- - [[Kext] BlueToolFixup v2.6.7](https://github.com/acidanthera/BrcmPatchRAM) :: BlueTooth patcher required for macOS 12 or newer.
- - [[Kext] NVMeFix v1.1.1](https://github.com/acidanthera/NVMeFix) :: Patches for the Apple NVMe storage driver, IONVMeFamily. Its goal is to improve compatibility with non-Apple SSDs.
+ - [[Kext] BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM) :: BlueTooth patcher required for macOS 12 or newer.
+ - [[Kext] NVMeFix](https://github.com/acidanthera/NVMeFix) :: Patches for the Apple NVMe storage driver, IONVMeFamily. Its goal is to improve compatibility with non-Apple SSDs.
 
  - [[Tool] gibMacOS](https://github.com/corpnewt/gibMacOS) :: Download macOS versions via CLI.
  - [[Tool] GenSMBIOS](https://github.com/corpnewt/GenSMBIOSGenSMBIOS) :: Generate custom SMBIOS.
