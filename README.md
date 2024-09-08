@@ -9,10 +9,10 @@ Hackintosh OpenCore EFI for AMD **Ryzen** running OS X on **Gigabyte B550i Aorus
 | Mobo | Gigabyte B550i Aorus Pro AX (rev 1.0) BIOS F17 |
 | Graphics | Sapphire Pulse Radeon RX 6600 8GB GDDR6 (Navi 23) | Sapphire Pulse Radeon RX 580 8GB GDDR5 Lite (Polaris) |
 
-**OpenCore version**: [0.9.4](https://github.com/acidanthera/opencorepkg/releases)
+**OpenCore version**: [1.0.1](https://github.com/acidanthera/opencorepkg/releases)
 
 ## Compatible macOS versions
- - Monterey (12.7.4)
+ - Ventura (13.6.9)
 
 ## What Works
  - Wi-Fi : Intel AX200
